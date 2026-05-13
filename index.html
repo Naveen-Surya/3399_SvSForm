@@ -1,206 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SVS Prep Registration</title>
+<title>SVS PREP REGISTRATION</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    body{
-      font-family:'Rajdhani', sans-serif;
-      background:
-      linear-gradient(rgba(5,10,20,0.92), rgba(5,10,20,0.95)),
-      url('https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=1600&auto=format&fit=crop');
-      background-size:cover;
-      background-attachment:fixed;
-      color:white;
-      padding:20px;
-    }
+body{
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      background:rgba(15,23,42,0.95);
-      border-radius:24px;
-      overflow:hidden;
-      border:1px solid rgba(96,165,250,0.25);
-      box-shadow:
-      0 0 40px rgba(37,99,235,0.25),
-      0 0 80px rgba(0,0,0,0.6);
-    }
+  font-family:'Rajdhani', sans-serif;
 
-    .header{
-      padding:40px;
-      text-align:center;
-      background:
-      linear-gradient(135deg,#2563eb,#0f172a);
-    }
+  background:
+  radial-gradient(circle at top,#1e3a8a 0%,#020617 45%),
+  linear-gradient(to bottom,#020617,#0f172a);
 
-    .header h1{
-      font-family:'Orbitron', sans-serif;
-      font-size:42px;
-      letter-spacing:2px;
-      margin-bottom:12px;
-    }
+  color:white;
 
-    .header p{
-      font-size:20px;
-      color:#dbeafe;
-    }
+  min-height:100vh;
 
-    form{
-      padding:30px;
-    }
+  padding:30px;
 
-    .section{
-      margin-bottom:35px;
-      padding:25px;
-      border-radius:20px;
-      background:rgba(30,41,59,0.92);
-    }
+}
 
-    .section h2{
-      font-family:'Orbitron', sans-serif;
-      color:#60a5fa;
-      margin-bottom:24px;
-      font-size:24px;
-      border-left:5px solid #3b82f6;
-      padding-left:14px;
-    }
+.container{
 
-    .field{
-      margin-bottom:24px;
-    }
+  max-width:1200px;
 
-    label{
-      display:block;
-      margin-bottom:10px;
-      font-size:18px;
-      font-weight:600;
-      color:#e2e8f0;
-    }
+  margin:auto;
 
-    input,
-    select{
-      width:100%;
-      padding:14px;
-      border:none;
-      border-radius:12px;
-      background:#334155;
-      color:white;
-      font-size:16px;
-      outline:none;
-    }
+  border-radius:30px;
 
-    input:focus,
-    select:focus{
-      box-shadow:0 0 0 2px #60a5fa;
-    }
+  overflow:hidden;
 
-    .note{
-      margin-top:8px;
-      color:#93c5fd;
-      font-size:14px;
-      font-weight:600;
-    }
+  border:1px solid rgba(255,255,255,0.08);
 
-    .checkbox-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:12px;
-      margin-top:12px;
-    }
+  background:
+  rgba(15,23,42,0.92);
 
-    .checkbox-item{
-      background:#334155;
-      padding:12px 14px;
-      border-radius:12px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      cursor:pointer;
-      transition:0.3s;
-    }
+  backdrop-filter:blur(10px);
 
-    .checkbox-item:hover{
-      background:#475569;
-      transform:translateY(-2px);
-    }
+  box-shadow:
+  0 0 50px rgba(59,130,246,0.25),
+  0 0 120px rgba(0,0,0,0.6);
 
-    .checkbox-item input{
-      width:auto;
-      transform:scale(1.2);
-    }
+}
 
-    .multi-note{
-      margin-top:10px;
-      color:#93c5fd;
-      font-size:14px;
-      font-weight:600;
-    }
+.hero-banner{
 
-    button{
-      width:100%;
-      padding:18px;
-      border:none;
-      border-radius:14px;
-      background:
-      linear-gradient(135deg,#2563eb,#1d4ed8);
-      color:white;
-      font-size:22px;
-      font-family:'Orbitron', sans-serif;
-      cursor:pointer;
-      transition:0.3s;
-    }
+  position:relative;
 
-    button:hover{
-      transform:translateY(-2px);
-      box-shadow:0 0 25px rgba(96,165,250,0.5);
-    }
+  padding:60px 40px;
 
-    @media(max-width:768px){
+  text-align:center;
 
-      .header h1{
-        font-size:30px;
-      }
+  background:
+  linear-gradient(135deg,
+  rgba(37,99,235,0.9),
+  rgba(15,23,42,0.95));
 
-      .header p{
-        font-size:16px;
-      }
+  overflow:hidden;
 
-      form{
-        padding:20px;
-      }
+}
 
-      .section{
-        padding:18px;
-      }
+.hero-banner::before{
 
-    }
+  content:"";
 
-  </style>
+  position:absolute;
+
+  inset:0;
+
+  background:
+  radial-gradient(circle at top right,
+  rgba(255,255,255,0.12),
+  transparent 40%);
+
+}
+
+.hero-banner h1{
+
+  position:relative;
+
+  font-family:'Orbitron', sans-serif;
+
+  font-size:52px;
+
+  letter-spacing:3px;
+
+  font-weight:900;
+
+  margin-bottom:14px;
+
+  text-shadow:
+  0 0 20px rgba(96,165,250,0.8);
+
+}
+
+.hero-banner p{
+
+  position:relative;
+
+  font-size:20px;
+
+  color:#dbeafe;
+
+}
+
+form{
+
+  padding:35px;
+
+}
+
+.section{
+
+  background:
+  linear-gradient(145deg,
+  rgba(30,41,59,0.95),
+  rgba(15,23,42,0.98));
+
+  border-radius:24px;
+
+  padding:28px;
+
+  margin-bottom:30px;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  box-shadow:
+  inset 0 0 0 1px rgba(255,255,255,0.02);
+
+}
+
+.section h2{
+
+  font-family:'Orbitron', sans-serif;
+
+  font-size:24px;
+
+  color:#60a5fa;
+
+  margin-bottom:28px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+}
+
+.field{
+
+  margin-bottom:24px;
+
+}
+
+label{
+
+  display:block;
+
+  margin-bottom:10px;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  color:#e2e8f0;
+
+}
+
+input,
+select{
+
+  width:100%;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:#334155;
+
+  color:white;
+
+  font-size:16px;
+
+  transition:0.25s;
+
+}
+
+input:focus,
+select:focus{
+
+  outline:none;
+
+  box-shadow:
+  0 0 0 2px #60a5fa,
+  0 0 18px rgba(96,165,250,0.35);
+
+}
+
+.note-box{
+
+  background:
+  linear-gradient(135deg,
+  rgba(37,99,235,0.25),
+  rgba(30,41,59,0.7));
+
+  border:1px solid rgba(96,165,250,0.25);
+
+  padding:18px;
+
+  border-radius:18px;
+
+  margin-bottom:26px;
+
+  line-height:1.7;
+
+  color:#dbeafe;
+
+  font-size:16px;
+
+}
+
+.note-box strong{
+
+  color:#93c5fd;
+
+}
+
+.checkbox-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+
+  gap:14px;
+
+}
+
+.checkbox-item{
+
+  background:#334155;
+
+  border-radius:16px;
+
+  padding:14px 16px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
+  cursor:pointer;
+
+  transition:0.25s;
+
+  border:1px solid rgba(255,255,255,0.04);
+
+}
+
+.checkbox-item:hover{
+
+  transform:translateY(-3px);
+
+  background:#475569;
+
+  box-shadow:
+  0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+.checkbox-item input{
+
+  width:auto;
+
+  transform:scale(1.2);
+
+}
+
+.multi-note{
+
+  margin-top:14px;
+
+  color:#93c5fd;
+
+  font-weight:700;
+
+  font-size:14px;
+
+}
+
+.submit-btn{
+
+  width:100%;
+
+  border:none;
+
+  padding:22px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(135deg,#2563eb,#1d4ed8);
+
+  color:white;
+
+  font-size:24px;
+
+  font-family:'Orbitron', sans-serif;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  box-shadow:
+  0 0 25px rgba(37,99,235,0.4);
+
+}
+
+.submit-btn:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 0 35px rgba(59,130,246,0.7);
+
+}
+
+.footer-note{
+
+  text-align:center;
+
+  margin-top:22px;
+
+  color:#94a3b8;
+
+  font-size:14px;
+
+}
+
+@media(max-width:768px){
+
+  body{
+
+    padding:16px;
+
+  }
+
+  .hero-banner{
+
+    padding:40px 20px;
+
+  }
+
+  .hero-banner h1{
+
+    font-size:32px;
+
+  }
+
+  .hero-banner p{
+
+    font-size:16px;
+
+  }
+
+  form{
+
+    padding:18px;
+
+  }
+
+  .section{
+
+    padding:20px;
+
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <div class="header">
+  <div class="hero-banner">
 
-    <h1>🔥 SVS PREP REGISTRATION 🔥</h1>
+    <h1>🔥 SVS PREP HUB 🔥</h1>
 
     <p>
-      Track alliance preparation resources & availability
+      Alliance Resource & Availability Tracking
     </p>
 
   </div>
@@ -218,10 +426,10 @@
       value="svs-prep-form"
     >
 
-    <!-- PLAYER INFO -->
+    <!-- PLAYER -->
     <div class="section">
 
-      <h2>👤 Player Information</h2>
+      <h2>👤 PLAYER INFORMATION</h2>
 
       <div class="field">
 
@@ -258,6 +466,7 @@
         >
 
           <option value="">Select Alliance</option>
+
           <option value="WAR">WAR</option>
           <option value="PWU">PWU</option>
           <option value="BAD">BAD</option>
@@ -285,10 +494,10 @@
 
     </div>
 
-    <!-- RESOURCE INFO -->
+    <!-- RESOURCES -->
     <div class="section">
 
-      <h2>🔥 SVS Resources</h2>
+      <h2>🔥 SVS RESOURCES</h2>
 
       <div class="field">
 
@@ -300,7 +509,7 @@
           min="0"
         >
 
-        <div class="note">
+        <div class="multi-note">
           💡 If all your buildings are FC5, enter 0
         </div>
 
@@ -315,6 +524,18 @@
           name="fireCrystalShards"
           min="0"
         >
+
+      </div>
+
+      <!-- SPEEDUP NOTE -->
+      <div class="note-box">
+
+        <strong>NOTE:</strong><br>
+
+        Split and add your GENERAL SPEEDUPS
+        across the 3 categories below
+        in whichever way you plan to use them
+        during SVS Prep.
 
       </div>
 
@@ -362,7 +583,7 @@
     <!-- AVAILABILITY -->
     <div class="section">
 
-      <h2>🕒 Availability (UTC)</h2>
+      <h2>🕒 AVAILABILITY (UTC)</h2>
 
       <div class="checkbox-grid">
 
@@ -434,9 +655,16 @@
 
     </div>
 
-    <button type="submit">
-      🚀 Submit SVS Prep Data
+    <button
+      type="submit"
+      class="submit-btn"
+    >
+      🚀 SUBMIT SVS PREP DATA
     </button>
+
+    <div class="footer-note">
+      Data securely collected through Netlify Forms
+    </div>
 
   </form>
 
