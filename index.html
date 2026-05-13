@@ -168,29 +168,6 @@ select:focus{
 
 }
 
-.info-note{
-
-  background:
-  linear-gradient(135deg,#dbeafe,#eff6ff);
-
-  border-left:6px solid #2563eb;
-
-  padding:18px;
-
-  border-radius:16px;
-
-  margin-top:12px;
-
-  color:#1e3a8a;
-
-  line-height:1.7;
-
-  font-size:15px;
-
-  font-weight:600;
-
-}
-
 .warning-note{
 
   background:
@@ -473,6 +450,19 @@ select:focus{
 
       <h2>🔥 SVS Resources</h2>
 
+      <!-- FC NOTE -->
+      <div class="warning-note">
+
+        ⚠️ IMPORTANT NOTE<br><br>
+
+        If <strong>ALL</strong> your buildings are already
+        <strong>FC5</strong>,
+        please enter <strong>0</strong>
+        in the Fire Crystal field below.
+
+      </div>
+
+      <!-- FIRE CRYSTALS -->
       <div class="field">
 
         <label>Number of Fire Crystals</label>
@@ -481,17 +471,12 @@ select:focus{
           type="number"
           name="fireCrystals"
           min="0"
+          placeholder="Example: 500 or 1000"
         >
-
-        <div class="info-note">
-
-          💡 If ALL your buildings are already FC5,
-          please enter <strong>0</strong>.
-
-        </div>
 
       </div>
 
+      <!-- FC SHARDS -->
       <div class="field">
 
         <label>Number of Fire Crystal Shards</label>
@@ -500,21 +485,25 @@ select:focus{
           type="number"
           name="fireCrystalShards"
           min="0"
+          placeholder="Example: 500 or 1000"
         >
 
       </div>
 
+      <!-- SPEEDUP NOTE -->
       <div class="warning-note">
 
         ⚠️ IMPORTANT NOTE<br><br>
 
-        Split and distribute your GENERAL SPEEDUPS
+        Split and distribute your
+        <strong>GENERAL SPEEDUPS</strong>
         between the 3 categories below
         based on how you plan to use them
         during SVS Prep.
 
       </div>
 
+      <!-- CONSTRUCTION -->
       <div class="field">
 
         <label>Construction Speedups (Days)</label>
@@ -528,6 +517,7 @@ select:focus{
 
       </div>
 
+      <!-- TRAINING -->
       <div class="field">
 
         <label>Troop Training Speedups (Days)</label>
@@ -541,6 +531,7 @@ select:focus{
 
       </div>
 
+      <!-- RESEARCH -->
       <div class="field">
 
         <label>Research Speedups (Days)</label>
