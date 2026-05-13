@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SVS PREP REGISTRATION</title>
+<title>SVS Prep Registration</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,101 +18,68 @@
 
 body{
 
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Poppins', sans-serif;
 
   background:
-  radial-gradient(circle at top,#1e3a8a 0%,#020617 45%),
-  linear-gradient(to bottom,#020617,#0f172a);
-
-  color:white;
+  linear-gradient(135deg,#0f172a,#111827,#1e293b);
 
   min-height:100vh;
 
-  padding:30px;
+  color:white;
+
+  padding:25px;
 
 }
 
 .container{
 
-  max-width:1200px;
+  max-width:1150px;
 
   margin:auto;
+
+  background:#ffffff;
+
+  color:#0f172a;
 
   border-radius:30px;
 
   overflow:hidden;
 
-  border:1px solid rgba(255,255,255,0.08);
-
-  background:
-  rgba(15,23,42,0.92);
-
-  backdrop-filter:blur(10px);
-
   box-shadow:
-  0 0 50px rgba(59,130,246,0.25),
-  0 0 120px rgba(0,0,0,0.6);
+  0 20px 60px rgba(0,0,0,0.35);
 
 }
 
-.hero-banner{
+.hero{
 
-  position:relative;
+  background:
+  linear-gradient(135deg,#2563eb,#4f46e5,#7c3aed);
 
-  padding:60px 40px;
+  padding:55px 35px;
 
   text-align:center;
 
-  background:
-  linear-gradient(135deg,
-  rgba(37,99,235,0.9),
-  rgba(15,23,42,0.95));
-
-  overflow:hidden;
+  color:white;
 
 }
 
-.hero-banner::before{
+.hero h1{
 
-  content:"";
+  font-size:48px;
 
-  position:absolute;
-
-  inset:0;
-
-  background:
-  radial-gradient(circle at top right,
-  rgba(255,255,255,0.12),
-  transparent 40%);
-
-}
-
-.hero-banner h1{
-
-  position:relative;
-
-  font-family:'Orbitron', sans-serif;
-
-  font-size:52px;
-
-  letter-spacing:3px;
-
-  font-weight:900;
+  font-weight:800;
 
   margin-bottom:14px;
 
-  text-shadow:
-  0 0 20px rgba(96,165,250,0.8);
+  letter-spacing:1px;
 
 }
 
-.hero-banner p{
-
-  position:relative;
+.hero p{
 
   font-size:20px;
 
-  color:#dbeafe;
+  opacity:0.95;
 
 }
 
@@ -124,10 +91,7 @@ form{
 
 .section{
 
-  background:
-  linear-gradient(145deg,
-  rgba(30,41,59,0.95),
-  rgba(15,23,42,0.98));
+  background:#f8fafc;
 
   border-radius:24px;
 
@@ -135,28 +99,19 @@ form{
 
   margin-bottom:30px;
 
-  border:1px solid rgba(255,255,255,0.05);
-
-  box-shadow:
-  inset 0 0 0 1px rgba(255,255,255,0.02);
+  border:2px solid #e2e8f0;
 
 }
 
 .section h2{
 
-  font-family:'Orbitron', sans-serif;
+  font-size:28px;
 
-  font-size:24px;
+  margin-bottom:26px;
 
-  color:#60a5fa;
+  color:#1d4ed8;
 
-  margin-bottom:28px;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
+  font-weight:800;
 
 }
 
@@ -172,11 +127,11 @@ label{
 
   margin-bottom:10px;
 
-  font-size:18px;
+  font-size:17px;
 
   font-weight:700;
 
-  color:#e2e8f0;
+  color:#0f172a;
 
 }
 
@@ -187,15 +142,15 @@ select{
 
   padding:16px;
 
-  border:none;
-
   border-radius:16px;
 
-  background:#334155;
+  border:2px solid #cbd5e1;
 
-  color:white;
+  background:white;
 
   font-size:16px;
+
+  font-family:'Poppins', sans-serif;
 
   transition:0.25s;
 
@@ -206,38 +161,56 @@ select:focus{
 
   outline:none;
 
+  border-color:#2563eb;
+
   box-shadow:
-  0 0 0 2px #60a5fa,
-  0 0 18px rgba(96,165,250,0.35);
+  0 0 0 4px rgba(37,99,235,0.15);
 
 }
 
-.note-box{
+.info-note{
 
   background:
-  linear-gradient(135deg,
-  rgba(37,99,235,0.25),
-  rgba(30,41,59,0.7));
+  linear-gradient(135deg,#dbeafe,#eff6ff);
 
-  border:1px solid rgba(96,165,250,0.25);
+  border-left:6px solid #2563eb;
 
   padding:18px;
 
-  border-radius:18px;
+  border-radius:16px;
 
-  margin-bottom:26px;
+  margin-top:12px;
+
+  color:#1e3a8a;
 
   line-height:1.7;
 
-  color:#dbeafe;
+  font-size:15px;
 
-  font-size:16px;
+  font-weight:600;
 
 }
 
-.note-box strong{
+.warning-note{
 
-  color:#93c5fd;
+  background:
+  linear-gradient(135deg,#fef3c7,#fffbeb);
+
+  border-left:6px solid #f59e0b;
+
+  padding:22px;
+
+  border-radius:18px;
+
+  margin-bottom:28px;
+
+  color:#92400e;
+
+  line-height:1.8;
+
+  font-size:16px;
+
+  font-weight:700;
 
 }
 
@@ -246,7 +219,7 @@ select:focus{
   display:grid;
 
   grid-template-columns:
-  repeat(auto-fit,minmax(220px,1fr));
+  repeat(auto-fit,minmax(240px,1fr));
 
   gap:14px;
 
@@ -254,34 +227,35 @@ select:focus{
 
 .checkbox-item{
 
-  background:#334155;
-
-  border-radius:16px;
-
-  padding:14px 16px;
-
   display:flex;
 
   align-items:center;
 
   gap:12px;
 
+  background:white;
+
+  border:2px solid #cbd5e1;
+
+  border-radius:18px;
+
+  padding:16px;
+
   cursor:pointer;
 
   transition:0.25s;
 
-  border:1px solid rgba(255,255,255,0.04);
+  font-weight:600;
 
 }
 
 .checkbox-item:hover{
 
-  transform:translateY(-3px);
+  border-color:#2563eb;
 
-  background:#475569;
+  background:#eff6ff;
 
-  box-shadow:
-  0 10px 20px rgba(0,0,0,0.2);
+  transform:translateY(-2px);
 
 }
 
@@ -289,7 +263,7 @@ select:focus{
 
   width:auto;
 
-  transform:scale(1.2);
+  transform:scale(1.25);
 
 }
 
@@ -297,11 +271,11 @@ select:focus{
 
   margin-top:14px;
 
-  color:#93c5fd;
+  color:#2563eb;
+
+  font-size:15px;
 
   font-weight:700;
-
-  font-size:14px;
 
 }
 
@@ -309,29 +283,29 @@ select:focus{
 
   width:100%;
 
-  border:none;
-
   padding:22px;
 
-  border-radius:20px;
+  border:none;
+
+  border-radius:22px;
 
   background:
-  linear-gradient(135deg,#2563eb,#1d4ed8);
+  linear-gradient(135deg,#2563eb,#4f46e5);
 
   color:white;
 
   font-size:24px;
 
-  font-family:'Orbitron', sans-serif;
+  font-weight:800;
 
-  font-weight:700;
+  font-family:'Poppins', sans-serif;
 
   cursor:pointer;
 
   transition:0.3s;
 
   box-shadow:
-  0 0 25px rgba(37,99,235,0.4);
+  0 15px 30px rgba(37,99,235,0.25);
 
 }
 
@@ -340,17 +314,17 @@ select:focus{
   transform:translateY(-3px);
 
   box-shadow:
-  0 0 35px rgba(59,130,246,0.7);
+  0 20px 40px rgba(37,99,235,0.35);
 
 }
 
-.footer-note{
+.footer{
 
   text-align:center;
 
-  margin-top:22px;
+  padding:10px 0 5px;
 
-  color:#94a3b8;
+  color:#64748b;
 
   font-size:14px;
 
@@ -360,23 +334,23 @@ select:focus{
 
   body{
 
-    padding:16px;
+    padding:12px;
 
   }
 
-  .hero-banner{
+  .hero{
 
     padding:40px 20px;
 
   }
 
-  .hero-banner h1{
+  .hero h1{
 
-    font-size:32px;
+    font-size:34px;
 
   }
 
-  .hero-banner p{
+  .hero p{
 
     font-size:16px;
 
@@ -403,12 +377,12 @@ select:focus{
 
 <div class="container">
 
-  <div class="hero-banner">
+  <div class="hero">
 
-    <h1>🔥 SVS PREP HUB 🔥</h1>
+    <h1>🔥 SVS PREP REGISTRATION</h1>
 
     <p>
-      Alliance Resource & Availability Tracking
+      Track Alliance Preparation Resources & Availability
     </p>
 
   </div>
@@ -426,10 +400,10 @@ select:focus{
       value="svs-prep-form"
     >
 
-    <!-- PLAYER -->
+    <!-- PLAYER INFO -->
     <div class="section">
 
-      <h2>👤 PLAYER INFORMATION</h2>
+      <h2>👤 Player Information</h2>
 
       <div class="field">
 
@@ -497,7 +471,7 @@ select:focus{
     <!-- RESOURCES -->
     <div class="section">
 
-      <h2>🔥 SVS RESOURCES</h2>
+      <h2>🔥 SVS Resources</h2>
 
       <div class="field">
 
@@ -509,8 +483,11 @@ select:focus{
           min="0"
         >
 
-        <div class="multi-note">
-          💡 If all your buildings are FC5, enter 0
+        <div class="info-note">
+
+          💡 If ALL your buildings are already FC5,
+          please enter <strong>0</strong>.
+
         </div>
 
       </div>
@@ -527,14 +504,13 @@ select:focus{
 
       </div>
 
-      <!-- SPEEDUP NOTE -->
-      <div class="note-box">
+      <div class="warning-note">
 
-        <strong>NOTE:</strong><br>
+        ⚠️ IMPORTANT NOTE<br><br>
 
-        Split and add your GENERAL SPEEDUPS
-        across the 3 categories below
-        in whichever way you plan to use them
+        Split and distribute your GENERAL SPEEDUPS
+        between the 3 categories below
+        based on how you plan to use them
         during SVS Prep.
 
       </div>
@@ -583,7 +559,7 @@ select:focus{
     <!-- AVAILABILITY -->
     <div class="section">
 
-      <h2>🕒 AVAILABILITY (UTC)</h2>
+      <h2>🕒 Availability (UTC)</h2>
 
       <div class="checkbox-grid">
 
@@ -659,11 +635,11 @@ select:focus{
       type="submit"
       class="submit-btn"
     >
-      🚀 SUBMIT SVS PREP DATA
+      🚀 Submit SVS Prep Data
     </button>
 
-    <div class="footer-note">
-      Data securely collected through Netlify Forms
+    <div class="footer">
+      Securely powered by Netlify Forms
     </div>
 
   </form>
