@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -242,6 +244,8 @@ select:focus{
 
   transform:scale(1.25);
 
+  accent-color:#2563eb;
+
 }
 
 .multi-note{
@@ -348,6 +352,7 @@ select:focus{
 }
 
 </style>
+
 </head>
 
 <body>
@@ -369,13 +374,24 @@ select:focus{
     name="svs-prep-form"
     method="POST"
     data-netlify="true"
+    netlify-honeypot="bot-field"
+    action="/success"
   >
 
+    <!-- Required hidden input -->
     <input
       type="hidden"
       name="form-name"
       value="svs-prep-form"
     >
+
+    <!-- Spam protection -->
+    <p hidden>
+      <label>
+        Don’t fill this out:
+        <input name="bot-field">
+      </label>
+    </p>
 
     <!-- PLAYER INFO -->
     <div class="section">
@@ -413,7 +429,6 @@ select:focus{
         <select
           name="alliance"
           id="allianceSelect"
-          onchange="toggleOtherAlliance()"
         >
 
           <option value="">Select Alliance</option>
@@ -450,7 +465,6 @@ select:focus{
 
       <h2>🔥 SVS Resources</h2>
 
-      <!-- FC NOTE -->
       <div class="warning-note">
 
         ⚠️ IMPORTANT NOTE<br><br>
@@ -462,7 +476,6 @@ select:focus{
 
       </div>
 
-      <!-- FIRE CRYSTALS -->
       <div class="field">
 
         <label>Number of Fire Crystals</label>
@@ -476,7 +489,6 @@ select:focus{
 
       </div>
 
-      <!-- FC SHARDS -->
       <div class="field">
 
         <label>Number of Fire Crystal Shards</label>
@@ -490,7 +502,6 @@ select:focus{
 
       </div>
 
-      <!-- SPEEDUP NOTE -->
       <div class="warning-note">
 
         ⚠️ IMPORTANT NOTE<br><br>
@@ -503,7 +514,6 @@ select:focus{
 
       </div>
 
-      <!-- CONSTRUCTION -->
       <div class="field">
 
         <label>Construction Speedups (Days)</label>
@@ -517,7 +527,6 @@ select:focus{
 
       </div>
 
-      <!-- TRAINING -->
       <div class="field">
 
         <label>Troop Training Speedups (Days)</label>
@@ -531,7 +540,6 @@ select:focus{
 
       </div>
 
-      <!-- RESEARCH -->
       <div class="field">
 
         <label>Research Speedups (Days)</label>
@@ -555,62 +563,62 @@ select:focus{
       <div class="checkbox-grid">
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="00:00 - 01:59 UTC">
+          <input type="checkbox" name="availability[]" value="00:00 - 01:59 UTC">
           00:00 - 01:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="02:00 - 03:59 UTC">
+          <input type="checkbox" name="availability[]" value="02:00 - 03:59 UTC">
           02:00 - 03:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="04:00 - 05:59 UTC">
+          <input type="checkbox" name="availability[]" value="04:00 - 05:59 UTC">
           04:00 - 05:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="06:00 - 07:59 UTC">
+          <input type="checkbox" name="availability[]" value="06:00 - 07:59 UTC">
           06:00 - 07:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="08:00 - 09:59 UTC">
+          <input type="checkbox" name="availability[]" value="08:00 - 09:59 UTC">
           08:00 - 09:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="10:00 - 11:59 UTC">
+          <input type="checkbox" name="availability[]" value="10:00 - 11:59 UTC">
           10:00 - 11:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="12:00 - 13:59 UTC">
+          <input type="checkbox" name="availability[]" value="12:00 - 13:59 UTC">
           12:00 - 13:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="14:00 - 15:59 UTC">
+          <input type="checkbox" name="availability[]" value="14:00 - 15:59 UTC">
           14:00 - 15:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="16:00 - 17:59 UTC">
+          <input type="checkbox" name="availability[]" value="16:00 - 17:59 UTC">
           16:00 - 17:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="18:00 - 19:59 UTC">
+          <input type="checkbox" name="availability[]" value="18:00 - 19:59 UTC">
           18:00 - 19:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="20:00 - 21:59 UTC">
+          <input type="checkbox" name="availability[]" value="20:00 - 21:59 UTC">
           20:00 - 21:59 UTC
         </label>
 
         <label class="checkbox-item">
-          <input type="checkbox" name="availability" value="22:00 - 23:59 UTC">
+          <input type="checkbox" name="availability[]" value="22:00 - 23:59 UTC">
           22:00 - 23:59 UTC
         </label>
 
@@ -660,6 +668,10 @@ function toggleOtherAlliance(){
   }
 
 }
+
+document
+  .getElementById("allianceSelect")
+  .addEventListener("change", toggleOtherAlliance);
 
 </script>
 
